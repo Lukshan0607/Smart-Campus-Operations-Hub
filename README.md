@@ -1,9 +1,7 @@
-# Smart-Campus-Operations-Hub-
-3rd year 1st semester group project | java (Spring Boot) Rest API + React Frontend
-
 # 🎓 Smart Campus Operations Hub
 
 A full-stack web application developed for managing university facility bookings and maintenance operations. This system is built as part of the **IT3030 – Programming Applications and Frameworks (PAF) Assignment 2026**.
+3rd year 1st semester group project | java (Spring Boot) Rest API + React Frontend
 
 ---
 
@@ -197,11 +195,6 @@ git push origin feature-branch-name
 
 ---
 
-## 📸 Screenshots / Demo
-
-(Add screenshots or video link here)
-
----
 
 ## ⚠️ Notes
 
