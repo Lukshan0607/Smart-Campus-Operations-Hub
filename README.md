@@ -102,7 +102,7 @@ cd Smart-Campus-Operations-Hub
 
 Make sure you have installed:
 
-* Java JDK 17+
+* Java JDK 21
 * Node.js (v18+)
 * MySQL
 * Git
@@ -154,7 +154,7 @@ http://localhost:9090
 ## 🔹 Step 4 – Setup Frontend
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
