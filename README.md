@@ -85,126 +85,220 @@ Main entities:
 
 (Relationships implemented using JPA)
 
----
 
-## 📡 API Endpoints (Sample)
 
-### Resources
+# 🚀 Setup Guide (For New Members)
 
-* GET /api/resources
-* POST /api/resources
-* PUT /api/resources/{id}
-* DELETE /api/resources/{id}
-
-### Bookings
-
-* POST /api/bookings
-* GET /api/bookings/my
-* PUT /api/bookings/{id}/approve
-* PUT /api/bookings/{id}/reject
-
-### Tickets
-
-* POST /api/tickets
-* GET /api/tickets/my
-* PUT /api/tickets/{id}/status
-
----
-
-## ⚙️ Setup Instructions
-
-### 🔽 Clone Repository
+## 🔹 Step 1 – Clone the Repository
 
 ```bash
-git clone https://github.com/Lukshan0607/Smart-Campus-Operations-Hub-.git
-cd Smart-Campus-Operations-Hub-
+git clone https://github.com/Lukshan0607/Smart-Campus-Operations-Hub.git
+cd Smart-Campus-Operations-Hub
 ```
 
 ---
 
-### 🔙 Backend Setup (Spring Boot)
+## 🔹 Step 2 – Install Required Software
+
+Make sure you have installed:
+
+* Java JDK 17+
+* Node.js (v18+)
+* MySQL
+* Git
+
+---
+
+## 🔹 Step 3 – Setup Backend
 
 ```bash
 cd backend
-mvn clean install
+```
+
+### ▶ Configure Database
+
+Open:
+
+```
+src/main/resources/application.properties
+```
+
+Update:
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/smart_campus
+spring.datasource.username=root
+spring.datasource.password=YOUR_PASSWORD
+```
+
+### ▶ Create Database
+
+```sql
+CREATE DATABASE smart_campus;
+```
+
+### ▶ Run Backend
+
+```bash
 mvn spring-boot:run
 ```
 
----
+Backend runs on:
 
-### 🌐 Frontend Setup (React)
-
-```bash
-cd frontend
-npm install
-npm start
+```
+http://localhost:9090
 ```
 
 ---
 
-## 🔑 Git Commands (Daily Workflow)
+## 🔹 Step 4 – Setup Frontend
 
-### 📥 Pull latest changes
+```bash
+cd ../frontend
+npm install
+```
+
+### ▶ Install additional dependencies
+
+```bash
+npm install axios
+```
+
+### ▶ Run Frontend
+
+```bash
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔹 Step 5 – Git Ignore Notes ⚠️
+
+Already configured `.gitignore` (DO NOT change):
+
+Ignored folders:
+
+* `frontend/node_modules`
+* `backend/target`
+* `.env`
+* `.vscode`
+
+❗ Do NOT commit these files
+
+---
+
+## 🔹 Step 6 – Project Structure
+
+```
+smart-campus-system/
+│
+├── backend/        # Spring Boot API
+├── frontend/       # React App
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🔹 Step 7 – Daily Workflow (IMPORTANT)
+
+Before starting work:
 
 ```bash
 git pull origin main
 ```
 
-### 🌿 Create new branch
-
-```bash
-git checkout -b feature-branch-name
-```
-
-### ➕ Add changes
+After completing work:
 
 ```bash
 git add .
+git commit -m "your feature description"
+git push
 ```
 
-### 💬 Commit changes
+---
+
+## 🔹 Step 8 – Branch Workflow
+
+Each member should work on separate branches:
 
 ```bash
-git commit -m "Added new feature"
+git checkout -b feature/your-feature-name
 ```
 
-### 🚀 Push to GitHub
+Example:
 
 ```bash
-git push origin feature-branch-name
+git checkout -b feature/booking-system
 ```
 
 ---
 
-## 👥 Team Contributions
+## 🔹 Step 9 – API Testing
 
-| Member   | Responsibility       |
-| -------- | -------------------- |
-| Member 1 | Resource Management  |
-| Member 2 | Booking System       |
-| Member 3 | Ticket System        |
-| Member 4 | Auth & Notifications |
+Use:
+
+* Postman OR
+* Browser (for GET APIs)
 
 ---
 
-## 🧪 Testing
+## 🔹 Step 10 – Common Issues & Fixes
 
-* API tested using Postman
-* Backend validation & error handling implemented
-* Unit testing with JUnit (optional)
+### ❌ Port already in use
+
+Change port in:
+
+```
+application.properties
+```
+
+### ❌ Backend not connecting
+
+Check:
+
+* MySQL running
+* Database created
+
+### ❌ CORS Error
+
+Make sure controller has:
+
+```java
+@CrossOrigin
+```
 
 ---
 
+# ✅ Project Status
 
-## ⚠️ Notes
-
-* Ensure database is running before starting backend
-* Do not commit node_modules or target folders
-* Follow proper commit history for evaluation
+✔ Backend Setup Complete
+✔ Frontend Setup Complete
+✔ GitHub Integration Complete
 
 ---
 
-## 📄 License
+# 📌 Notes
 
-This project is developed for academic purposes (SLIIT – IT3030 Module).
+* Commit regularly (important for marks)
+* Do not push unnecessary files
+* Each member must contribute APIs
+
+---
+
+# 🎯 Future Enhancements
+
+* OAuth Login (Google)
+* Notification system
+* Admin dashboard
+
+---
+
+---
 
