@@ -146,7 +146,7 @@ mvn spring-boot:run
 Backend runs on:
 
 ```
-http://localhost:9090
+http://localhost:8081
 ```
 
 ---
